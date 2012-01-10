@@ -1,0 +1,20 @@
+{
+  "name": "はてなブックマーク/COOKPAD画像表示",
+  "version": "0.1",
+  "description": "はてなブックマーク (http://b.hatena.ne.jp/) 内の COOKPAD (http://cookpad.com/) へのリンクに、レシピの画像を追加します",
+  "icons": {
+    "16": "icon16.png",
+    "32": "icon32.png",
+    "48": "icon48.png",
+    "64": "icon64.png",
+    "128": "icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [ "http://b.hatena.ne.jp/*" ],
+      "css": [ "contentscript.css" ],
+      "js": [ "jquery-1.7.1.min.js", "contentscript.js" ]
+    }
+  ],
+  "permissions": [ "http://cookpad.com/*" ]
+}
